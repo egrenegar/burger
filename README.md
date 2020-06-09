@@ -1,2 +1,2 @@
 # "Eat-Da-Burger"
-App using MySQL, Node, Express, Handlebars to log and devour various burgers.
+"Eat-Da-Burger" is an app using MySQL, Node, Express, and Handlebars allowing users to log and "devour" various burgers.
