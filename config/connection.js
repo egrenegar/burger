@@ -15,3 +15,5 @@ connection.connect(function(err) {
     if (err) throw err;
     console.log('Connection successful')
 });
+
+exports.connection = connection;
