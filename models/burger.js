@@ -1,3 +1,3 @@
-const orm = require('config/orm');
+const orm = require('../config/orm');
 
-module.exports = ();
+// need to export this file
