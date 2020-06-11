@@ -4,34 +4,32 @@
 </header>
 
 <div class="container pt-2 pb-3">
-        <div class="row">
-            <div class="col">
-                <h3 class="text-center">Burgers to be Devoured:</h3>
-                <ol>
-                    {{#each burgers}}
-                    <li class="p-2">
-                        {{burger_name}}
+    <div class="row">
+        <div class="col">
+            <h3 class="text-center">Burgers to be Devoured:</h3>
+            <ol>
+                {{#each burgers}}
+                <li class="p-2">
+                    {{burger_name}}
 
-                        <button class="devour btn btn-secondary btn-sm justify-content-end" data-id="{{id}}">Devour it!</button>
-                    </li>
-                    {{/each}}
-                </ol>
-            </div>
-            <div class="col">
-                <h3 class="text-center">Devoured Burgers:</h3>
-                <ul class="list-group">
-                    {{#each burgers}}
-                    <li class="list-group-item">
-                        {{#if devoured}}
-                        {{> cats/cat-block sleep=false}}
-                        {{/if}}
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
+                    <button class="devour btn btn-secondary btn-sm justify-content-end" data-id="{{id}}">Devour it!</button>
+                </li>
+                {{/each}}
+            </ol>
         </div>
+        <div class="col">
+            <h3 class="text-center">Devoured Burgers:</h3>
+            <ul class="list-group">
+                {{#each burgers}}
+                <li class="list-group-item">
+                    {{#if devoured}}
+                    {{> cats/cat-block sleep=false}}
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ul>
         </div>
-        <div class="container">
+        <div class="container py-3">
             <div class="row text-center">
                 <div class="col">
                     <h4>Add a Burger:</h4>
@@ -39,15 +37,14 @@
             </div>
             <div class="row text-center">
                 <div class="col">
-                    <div>
-                        <form class="create-form py-2">
-                            <label for="bu">Burger Name:</label>
-                            <input type="text" id="bu" name="name">
-                            <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
-                        </form>
-                        <p>Enter the name of a burger you want to eat!</p>
-                    </div>
-                </div>
-
+                    <form class="create-form py-2">
+                        <label for="bu">Burger Name:</label>
+                        <input type="text" id="bu" name="name">
+                        <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+                    </form>
+                    <p>Enter the name of a burger you want to eat!</p>
+                </div>     
             </div>
         </div>
+    </div>
+</div>
