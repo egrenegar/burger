@@ -7,4 +7,4 @@ orm.insertOne();
 
 orm.updateOne();
 
-module.exports = burger.js;
+module.exports = 'burger.js';
