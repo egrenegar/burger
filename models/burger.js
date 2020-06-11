@@ -1,3 +1,10 @@
 const orm = require('../config/orm');
 
-// need to export this file
+// call the orm functions here
+orm.selectAll('*', 'burgers');
+
+orm.insertOne();
+
+orm.updateOne();
+
+module.exports = burger.js;
