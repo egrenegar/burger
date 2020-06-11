@@ -1,29 +1,30 @@
 const connection = require('./connection');
-// create the methods that will execute the necessary MySQL commands in the controllers.
-// These are the methods you will need to use in order to retrieve and store data in your database.
 
 const orm = {
-    selectAll: function (whatToSelect, table) {
+    selectAll: function (whatToSelect, table, cb) {
         const queryString = 'SELECT ?? FROM ??';
-        connection.query(queryString, [whatToSelect, table], function (err, res) {
+        connection.query(queryString, [whatToSelect, table], function (err, result) {
             if (err) throw err;
-            console.table(res);
+            console.table(result);
+            cb(result);
         });
     },
 
-    insertOne: function () {
-        const queryString = '';
-        connection.query(queryString, [], function (err, res) {
+    insertOne: function (table, cols, vals, cb) {
+        const queryString = 'INSERT INTO ?? (??) VALUES (??)';
+        connection.query(queryString, [table, cols, vals], function (err, result) {
             if (err) throw err;
-            console.table(res);
+            console.table(result);
+            cb(result);
         });
     },
 
-    updateOne: function () {
-        const queryString = '';
-        connection.query(queryString, [], function (err, res) {
+    updateOne: function (table, objColVal, condition, cb) {
+        const queryString = 'UPDATE ?? SET ?? WHERE ??';
+        connection.query(queryString, [table, objColVal, condition], function (err, result) {
             if (err) throw err;
-            console.table(res);
+            console.table(result);
+            cb(result);
         });
     }
 }
