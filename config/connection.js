@@ -16,4 +16,4 @@ connection.connect(function(err) {
     console.log('Connection successful')
 });
 
-exports.connection = connection;
+module.exports = connection;
