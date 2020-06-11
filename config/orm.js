@@ -11,7 +11,7 @@ const orm = {
     },
 
     insertOne: function (table, cols, vals, cb) {
-        const queryString = 'INSERT INTO ?? (??) VALUES (??)';
+        const queryString = 'INSERT INTO ?? (??) VALUES (?)';
         connection.query(queryString, [table, cols, vals], function (err, result) {
             if (err) throw err;
             console.table(result);
@@ -20,7 +20,7 @@ const orm = {
     },
 
     updateOne: function (table, objColVal, condition, cb) {
-        const queryString = 'UPDATE ?? SET ?? WHERE ??';
+        const queryString = 'UPDATE ?? SET ?? = ? WHERE ?? = ?';
         connection.query(queryString, [table, objColVal, condition], function (err, result) {
             if (err) throw err;
             console.table(result);
