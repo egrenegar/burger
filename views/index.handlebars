@@ -9,11 +9,14 @@
             <h3 class="text-center">Burgers to be Devoured:</h3>
             <ol>
                 {{#each burgers}}
-                <li class="p-2">
+                {{#unless devoured}}
+                <li>
                     {{burger_name}}
-
-                    <button class="devour btn btn-secondary btn-sm justify-content-end" data-id="{{id}}">Devour it!</button>
+                    <button class="change-devour" data-id="{{id}}" data-devoured="{{devoured}}">
+                        Devour it!
+                    </button>
                 </li>
+                {{/unless}}
                 {{/each}}
             </ol>
         </div>
@@ -21,11 +24,11 @@
             <h3 class="text-center">Devoured Burgers:</h3>
             <ul class="list-group">
                 {{#each burgers}}
+                {{#if devoured}}
                 <li class="list-group-item">
-                    {{#if devoured}}
-                    {{> cats/cat-block sleep=false}}
-                    {{/if}}
+                    {{burger_name}}
                 </li>
+                {{/if}}
                 {{/each}}
             </ul>
         </div>
@@ -38,12 +41,12 @@
             <div class="row text-center">
                 <div class="col">
                     <form class="create-form py-2">
-                        <label for="bu">Burger Name:</label>
-                        <input type="text" id="bu" name="name">
+                        <label for="burgername">Burger Name:</label>
+                        <input type="text" id="burgername" name="name">
                         <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
                     </form>
                     <p>Enter the name of a burger you want to eat!</p>
-                </div>     
+                </div>
             </div>
         </div>
     </div>
