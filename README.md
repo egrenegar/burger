@@ -11,7 +11,7 @@ Its file structure follows MVC guidelines.
 
 Eat-Da-Burger Homepage
 
-![](/public/img/EatDaBurger_Home.png)
+![](/public/img/Eat-Da-Burger.gif)
 
 ## Installation
 From inside the working directory, run the following code to install dependencies:
