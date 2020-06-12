@@ -7,12 +7,12 @@
     <div class="row">
         <div class="col">
             <h3 class="text-center">Burgers to be Devoured:</h3>
-            <ol>
+            <ul class="list-group">
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>
+                <li class="list-group-item">
                     {{burger_name}}
-                    <button class="change-devour" data-id="{{id}}" data-devoured="{{devoured}}">
+                    <button class="change-devour btn btn-sm btn-secondary justify-content-end" data-id="{{id}}" data-devoured="{{devoured}}">
                         Devour it!
                     </button>
                 </li>
