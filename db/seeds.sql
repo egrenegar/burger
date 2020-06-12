@@ -1,2 +1,8 @@
+INSERT INTO burgers (burger_name)
+VALUES ('Double Cheeseburger');
+
 INSERT INTO burgers (burger_name, devoured)
-VALUES ('Double Cheeseburger', 0), ('Hangover Burger', 0), ('Black Bean Burger', 0);
+VALUES ('Hangover Burger', true);
+
+INSERT INTO burgers (burger_name)
+VALUES('Black Bean Burger');
